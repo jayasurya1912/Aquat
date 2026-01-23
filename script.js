@@ -1,6 +1,8 @@
 
 
-  window.addEventListener("load", function () {
+ 
+
+ window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
     preloader.style.opacity = "0";
     preloader.style.transition = "opacity 0.6s ease";
@@ -10,7 +12,7 @@
     }, 600);
   });
 
-
+ 
   
   const counters = document.querySelectorAll('.counter');
   const speed = 200;
@@ -76,3 +78,4 @@ function typeEffect() {
 }
 
 typeEffect();
+
