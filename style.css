@@ -12,100 +12,128 @@
     }
     
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
+.main-navbar {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      overflow-x: hidden;
+    }
 
-.navbar-brand {
-  font-weight: 700;
-}
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
 
-     .main-navbar {
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
+    .navbar-brand img {
+      max-width: 220px;
+      height: auto;
+    }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-}
+    /* =========================
+       NAV LINKS
+    ========================== */
+    .nav-link {
+      font-weight: 600;
+      color: #0b1d3a !important;
+      padding: 24px 16px !important;
+      letter-spacing: 0.3px;
+    }
 
-.navbar-brand img {
-  max-width: 220px;
-  height: auto;
-}
+    .nav-link.active,
+    .nav-link:hover {
+      color: #1A76D1 !important;
+    }
 
-@media (max-width: 550px) {
-  .navbar-brand img {
-    max-width: 150px;
+    /* =========================
+       CONTACT INFO
+    ========================== */
+    .navbar-contact {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 600;
+    }
+
+    .navbar-contact a {
+      text-decoration: none;
+      color: #0B1D3A;
+      white-space: nowrap;
+    }
+
+    .navbar-contact a:hover {
+      color: #00BAFF;
+    }
+@media (max-width: 1250px) {
+
+  /* Reduce nav link spacing */
+  .nav-link {
+    padding: 16px 12px !important;
+    font-size: 14px;
   }
-}
 
-.navbar {
-  overflow-x: hidden;
-}
-
-.nav-link {
-  font-weight: 600;
-  color: #0b1d3a !important;
-  padding: 28px 18px !important;
-}
-
-.nav-link.active,
-.nav-link:hover {
-  color: #1A76D1 !important;
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
-
-.nav-link i {
-  font-size: 12px;
-  margin-left: 4px;
-}
-
-/* Mobile sidebar width */
-.offcanvas {
-  width: 280px;
-}
-    
-
-.navbar-contact {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-weight: 600;
-}
-
-.navbar-contact a {
-  white-space: nowrap;
-  text-decoration: none;
-  color: #0B1D3A;
-}
-
-.navbar-contact a:hover {
-  color: #00BAFF;
-}
-
-@media (max-width: 1350px) {
+  /* Reduce contact text size */
   .navbar-contact {
+    gap: 12px;
     font-size: 13px;
   }
+
+  .navbar-contact i {
+    font-size: 18px !important;
+  }
+
+  /* Slightly reduce logo */
+  .navbar-brand img {
+    max-width: 180px;
+  }
 }
 
+    /* =========================
+       OFFCANVAS (MOBILE)
+    ========================== */
+    .offcanvas {
+      width: 280px;
+    }
 
+    .offcanvas .nav-link {
+      padding: 12px 0 !important;
+      font-size: 16px;
+    }
 
-.contact-link {
-  color: #0B1D3A;
-  text-decoration: none;
-}
+    /* =========================
+       RESPONSIVE FIXES
+    ========================== */
 
-.contact-link:hover {
-  color: #00BAFF;
-}
+    /* Large screens down */
+    @media (max-width: 1200px) {
+      .nav-link {
+        padding: 18px 14px !important;
+      }
+    }
+
+    /* Tablets & Mobile */
+    @media (max-width: 991px) {
+      .navbar-contact {
+        display: none;
+      }
+
+      .navbar-brand img {
+        max-width: 160px;
+      }
+
+      .navbar {
+        padding: 10px 0;
+      }
+    }
+
+    /* Small mobiles */
+    @media (max-width: 550px) {
+      .navbar-brand img {
+        max-width: 140px;
+      }
+
+      .navbar-toggler {
+        padding: 4px 6px;
+      }
+    }
 
     /* =========================
        VIDEO BANNER
