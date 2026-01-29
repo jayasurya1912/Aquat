@@ -49,7 +49,7 @@
     }
   });
 
-const text = "Hindustan Aquatech";
+const text = "Aquat";
 
 const typingDelay = 120;     // typing speed
 const deletingDelay = 80;   // deleting speed
